@@ -1,8 +1,9 @@
 const express = require("express")
 const axios = require("axios")
 const app = express()
+require("dotenv").config();
 
-app.listen(5000);
+app.listen(process.env.PORT);
 
 
 app.get("/:username", async (req,res) => {
